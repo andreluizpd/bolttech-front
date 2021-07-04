@@ -3,15 +3,15 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { listTasks } from '../../actions/projectActions';
 
-const Tasks = ({ projectId }) => {
+const Tasks = ({ match }) => {
   const dispatch = useDispatch();
 
   const taskList = useSelector(state => state.taskList);
   const { loading, error, tasks } = taskList;
 
   useEffect(() => {
-    dispatch(listTasks(projectId));
-  }, [dispatch, projectId]);
+    dispatch(listTasks(match.params.id));
+  }, [dispatch, match]);
 
   return (
     <div>
