@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import Tasks from '../../tasks';
 
 const ProjectCard = ({ project }) => {
   return (
@@ -8,7 +9,7 @@ const ProjectCard = ({ project }) => {
         <Card.Title as='h4'>{project.title}</Card.Title>
 
         <Card.Text as='div'>
-          <p>Tasks Go here</p>
+          <Tasks projectId={project._id} />
         </Card.Text>
       </Card.Body>
     </Card>
