@@ -14,10 +14,10 @@ function App() {
       <Header />
       <main className='py-3'>
         <Container>
-          <Route path='/' component={Projects} exact />
           <Route path='/login' component={Login} />
           <Route path='/register' component={Register} />
           <Route path='/tasks/:id' component={Tasks} />
+          <Route path='/' component={Projects} exact />
         </Container>
       </main>
     </Router>
