@@ -4,6 +4,8 @@ import { Container } from 'react-bootstrap';
 
 import Header from './components/Header';
 import Projects from './pages/projects';
+import Login from './pages/login';
+import Register from './pages/register';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <main className='py-3'>
         <Container>
           <Route path='/' component={Projects} exact />
+          <Route path='/login' component={Login} />
+          <Route path='/register' component={Register} />
         </Container>
       </main>
     </Router>
